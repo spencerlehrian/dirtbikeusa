@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Dirt Bikes USA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .gallery-item { position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; }
+    .gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.4s; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1.5rem 1rem 1rem; color: #fff; transform: translateY(100%); transition: transform 0.3s; }
+    .gallery-item:hover .overlay { transform: translateY(0); }
+    .gallery-filter .btn.active { background-color: var(--brown); color: #fff; border-color: var(--brown); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">DIRT BIKES <span>USA</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a><ul class="dropdown-menu dropdown-menu-end" style="background:var(--darker);border:1px solid rgba(255,255,255,0.1);"><li><a class="dropdown-item" href="dealers.html" style="color:rgba(255,255,255,0.85);">Find a Dealer</a></li><li><a class="dropdown-item" href="gallery.html" style="color:rgba(255,255,255,0.85);">Gallery</a></li><li><a class="dropdown-item" href="events.html" style="color:rgba(255,255,255,0.85);">Events</a></li><li><a class="dropdown-item" href="faq.html" style="color:rgba(255,255,255,0.85);">FAQ</a></li></ul></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1>Photo Gallery</h1>
+      <p>Racing, trails, events, and life at Dirt Bikes USA</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-4 gallery-filter">
+        <button class="btn btn-sm btn-outline-brown m-1 active" onclick="filterGallery('all', this)">All</button>
+        <button class="btn btn-sm btn-outline-brown m-1" onclick="filterGallery('racing', this)">Racing</button>
+        <button class="btn btn-sm btn-outline-brown m-1" onclick="filterGallery('trails', this)">Trails &amp; Nature</button>
+        <button class="btn btn-sm btn-outline-brown m-1" onclick="filterGallery('products', this)">Our Bikes</button>
+        <button class="btn btn-sm btn-outline-brown m-1" onclick="filterGallery('events', this)">Events</button>
+      </div>
+
+      <div class="row g-3" id="galleryGrid">
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="racing">
+          <div class="gallery-item"><img src="images/blog-race.jpg" alt="Enduro Racing"><div class="overlay"><strong>National Enduro Series</strong><br><small>Round 7 — Leadville, CO</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="trails">
+          <div class="gallery-item"><img src="images/colorado.jpg" alt="Colorado Mountains"><div class="overlay"><strong>San Juan Mountains</strong><br><small>Autumn riding season</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="products">
+          <div class="gallery-item"><img src="images/enduro250.jpg" alt="Enduro 250"><div class="overlay"><strong>Enduro 250</strong><br><small>Trail-ready lightweight racer</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="racing">
+          <div class="gallery-item"><img src="images/blog-jump.jpg" alt="Motocross Jump"><div class="overlay"><strong>Motocross Competition</strong><br><small>Moto 450 getting air</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="trails">
+          <div class="gallery-item"><img src="images/page-header.jpg" alt="Mountain Trail"><div class="overlay"><strong>Rocky Mountain Trails</strong><br><small>Near Carbondale, CO</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="products">
+          <div class="gallery-item"><img src="images/enduro550.jpg" alt="Enduro 550"><div class="overlay"><strong>Enduro 550</strong><br><small>Forest-ready endurance machine</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="events">
+          <div class="gallery-item"><img src="images/blog-forest.jpg" alt="Forest Riding Event"><div class="overlay"><strong>Owners' Group Ride</strong><br><small>Annual year-end event</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="products">
+          <div class="gallery-item"><img src="images/moto300.jpg" alt="Moto 300"><div class="overlay"><strong>Moto 300</strong><br><small>Track-ready motocross</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="products">
+          <div class="gallery-item"><img src="images/moto450.jpg" alt="Moto 450"><div class="overlay"><strong>Moto 450</strong><br><small>Mountain power display</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="trails">
+          <div class="gallery-item"><img src="images/about.jpg" alt="Breckenridge"><div class="overlay"><strong>Breckenridge, Colorado</strong><br><small>Summer riding destination</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="racing">
+          <div class="gallery-item"><img src="images/hero.jpg" alt="Racing Action"><div class="overlay"><strong>Barstow to Las Vegas</strong><br><small>Where the legend began</small></div></div>
+        </div>
+        <div class="col-lg-4 col-md-6 gallery-card" data-cat="events">
+          <div class="gallery-item"><img src="images/enduro250.jpg" alt="Daytona Bike Week"><div class="overlay"><strong>Daytona Bike Week</strong><br><small>2024 booth showcase</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5>DIRT BIKES <span style="color: var(--primary);">USA</span></h5>
+          <p>Premium off-road motorcycles crafted in Carbondale, Colorado. Born from a passion for racing, built for riders who demand the best.</p>
+          <div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Our Models</h5>
+          <ul class="footer-links"><li><a href="products.html">Enduro 250</a></li><li><a href="products.html">Enduro 550</a></li><li><a href="products.html">Moto 300</a></li><li><a href="products.html">Moto 450</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="footer-links"><li><i class="fas fa-map-marker-alt me-2" style="color: var(--primary);"></i> Carbondale, CO 81623</li><li><i class="fas fa-phone me-2" style="color: var(--primary);"></i> (970) 555-0199</li><li><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> info@dirtbikesusa.com</li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center"><p class="mb-0">&copy; 2024 Dirt Bikes USA. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.gallery-filter .btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-card').forEach(function(card) {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

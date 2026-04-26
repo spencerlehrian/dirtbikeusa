@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Dirt Bikes USA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .event-card { background: var(--white); border-radius: 8px; box-shadow: 0 2px 15px rgba(44,36,22,0.08); overflow: hidden; height: 100%; transition: transform 0.3s; }
+    .event-card:hover { transform: translateY(-5px); }
+    .event-date-badge { background: var(--primary); color: #fff; text-align: center; padding: 1rem; min-width: 90px; }
+    .event-date-badge .month { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+    .event-date-badge .day { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .event-date-badge .year { font-size: 0.75rem; opacity: 0.8; }
+    .event-type { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+    .type-race { background: rgba(91,124,58,0.15); color: var(--primary); }
+    .type-group { background: rgba(122,92,62,0.15); color: var(--brown); }
+    .type-show { background: rgba(74,124,155,0.15); color: var(--sky); }
+    .type-dealer { background: rgba(166,139,107,0.15); color: #7A5C3E; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">DIRT BIKES <span>USA</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a><ul class="dropdown-menu dropdown-menu-end" style="background:var(--darker);border:1px solid rgba(255,255,255,0.1);"><li><a class="dropdown-item" href="dealers.html" style="color:rgba(255,255,255,0.85);">Find a Dealer</a></li><li><a class="dropdown-item" href="gallery.html" style="color:rgba(255,255,255,0.85);">Gallery</a></li><li><a class="dropdown-item" href="events.html" style="color:rgba(255,255,255,0.85);">Events</a></li><li><a class="dropdown-item" href="faq.html" style="color:rgba(255,255,255,0.85);">FAQ</a></li></ul></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/blog-race.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1>Events Calendar</h1>
+      <p>Races, group rides, shows, and dealer events</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Upcoming Events</h2>
+        <p class="section-subtitle">Join us on the trail, at the track, or at a show near you</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-12">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Mar</div><div class="day">1</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-show">Show</span>
+                <h5 class="mt-2 mb-1">Daytona Bike Week 2025</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Daytona Beach, FL &mdash; Main Exhibition Hall, Booth 247</p>
+                <p class="text-muted mb-0">Our biggest event of the year. All four models on display, demo rides on the Moto 450, meet the racing team, and exclusive event pricing on parts. March 1-10.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Apr</div><div class="day">12</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-group">Group Ride</span>
+                <h5 class="mt-2 mb-1">Spring Kickoff Ride — Carbondale</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Dirt Bikes USA HQ, Carbondale, CO</p>
+                <p class="text-muted mb-0">Owners' Group spring opener. Three routes for all skill levels plus a BBQ lunch at headquarters. Free for all Owners' Group members.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Apr</div><div class="day">26</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-race">Race</span>
+                <h5 class="mt-2 mb-1">National Enduro Series — Round 3</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Moab, UT</p>
+                <p class="text-muted mb-0">The Dirt Bikes USA factory team defends their Moab title. Come watch or compete on the red-rock desert terrain that favors our Enduro 550.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">May</div><div class="day">17</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-group">Group Ride</span>
+                <h5 class="mt-2 mb-1">Beginner Trail Day — Prince Creek</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Prince Creek Trail, Carbondale, CO</p>
+                <p class="text-muted mb-0">New to dirt biking? Join experienced riders for a guided introduction to trail riding on one of Carbondale's most scenic beginner routes. Demo bikes available.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Jun</div><div class="day">7</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-dealer">Dealer Event</span>
+                <h5 class="mt-2 mb-1">Demo Day — Front Range Dirt Bikes</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Denver, CO</p>
+                <p class="text-muted mb-0">Test ride all four Dirt Bikes USA models at our Denver dealer. Factory reps on hand for Q&A. Special financing available for purchases made on event day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Jul</div><div class="day">19</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-race">Race</span>
+                <h5 class="mt-2 mb-1">National Enduro Series — Round 7 (Home Round)</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Leadville, CO</p>
+                <p class="text-muted mb-0">Our home-state round at 10,000+ feet elevation. The Dirt Bikes USA factory team swept the podium here in 2024. VIP viewing areas for Owners' Group members.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Aug</div><div class="day">23</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-group">Group Ride</span>
+                <h5 class="mt-2 mb-1">Summer Epic Ride — Marble to Crested Butte</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Marble, CO (advanced route)</p>
+                <p class="text-muted mb-0">An all-day adventure ride through some of Colorado's most spectacular backcountry. Advanced riders only. Lunch provided at the Crested Butte turnaround.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Nov</div><div class="day">1</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-race">Race</span>
+                <h5 class="mt-2 mb-1">Barstow to Las Vegas 2025</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Barstow, CA to Las Vegas, NV</p>
+                <p class="text-muted mb-0">The legendary desert race where Dirt Bikes USA was born. Our factory team will be going for back-to-back wins on the Enduro 550.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="event-card">
+            <div class="d-flex">
+              <div class="event-date-badge d-flex flex-column justify-content-center">
+                <div class="month">Dec</div><div class="day">13</div><div class="year">2025</div>
+              </div>
+              <div class="p-3 flex-grow-1">
+                <span class="event-type type-group">Group Ride</span>
+                <h5 class="mt-2 mb-1">Annual Year-End Ride &amp; BBQ</h5>
+                <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-1"></i> Dirt Bikes USA HQ, Carbondale, CO</p>
+                <p class="text-muted mb-0">Our biggest community event. Three routes, BBQ at headquarters, factory tours, and a first look at the 2026 product roadmap. Open to all Owners' Group members.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5 p-4 rounded" style="background: var(--light);">
+        <h4>Want to attend an event?</h4>
+        <p class="text-muted mb-3">Join the Owners' Group for free access to group rides and VIP event perks.</p>
+        <a href="contact.html" class="btn btn-primary-custom me-2">Join Owners' Group</a>
+        <a href="dealers.html" class="btn btn-outline-brown">Find a Dealer</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5>DIRT BIKES <span style="color: var(--primary);">USA</span></h5>
+          <p>Premium off-road motorcycles crafted in Carbondale, Colorado. Born from a passion for racing, built for riders who demand the best.</p>
+          <div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Our Models</h5>
+          <ul class="footer-links"><li><a href="products.html">Enduro 250</a></li><li><a href="products.html">Enduro 550</a></li><li><a href="products.html">Moto 300</a></li><li><a href="products.html">Moto 450</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="footer-links"><li><i class="fas fa-map-marker-alt me-2" style="color: var(--primary);"></i> Carbondale, CO 81623</li><li><i class="fas fa-phone me-2" style="color: var(--primary);"></i> (970) 555-0199</li><li><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> info@dirtbikesusa.com</li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center"><p class="mb-0">&copy; 2024 Dirt Bikes USA. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

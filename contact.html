@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Dirt Bikes USA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">DIRT BIKES <span>USA</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a><ul class="dropdown-menu dropdown-menu-end" style="background:var(--darker);border:1px solid rgba(255,255,255,0.1);"><li><a class="dropdown-item" href="dealers.html" style="color:rgba(255,255,255,0.85);">Find a Dealer</a></li><li><a class="dropdown-item" href="gallery.html" style="color:rgba(255,255,255,0.85);">Gallery</a></li><li><a class="dropdown-item" href="events.html" style="color:rgba(255,255,255,0.85);">Events</a></li><li><a class="dropdown-item" href="faq.html" style="color:rgba(255,255,255,0.85);">FAQ</a></li></ul></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/colorado.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have a question? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="contact-info-card">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h5>Our Location</h5>
+            <p class="text-muted mb-0">Dirt Bikes USA Headquarters<br>Carbondale, CO 81623<br>United States</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <h5>Call Us</h5>
+            <p class="text-muted mb-1">Sales: (970) 555-0199</p>
+            <p class="text-muted mb-1">Service: (970) 555-0200</p>
+            <p class="text-muted mb-0">Mon–Fri, 8am–5pm MT</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <h5>Email Us</h5>
+            <p class="text-muted mb-1">General: info@dirtbikesusa.com</p>
+            <p class="text-muted mb-1">Sales: sales@dirtbikesusa.com</p>
+            <p class="text-muted mb-0">Service: service@dirtbikesusa.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form & Map -->
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <h2 class="section-title">Send Us a Message</h2>
+          <p class="text-muted mt-4 mb-4">Whether you're interested in a new bike, need parts or service, or just want to talk dirt bikes — fill out the form below and we'll get back to you within 24 hours.</p>
+          <form id="contactForm" class="contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="tel" class="form-control" name="phone" placeholder="Phone Number">
+              </div>
+              <div class="col-md-6">
+                <select class="form-control" name="subject">
+                  <option value="">Select Subject</option>
+                  <option value="sales">Sales Inquiry</option>
+                  <option value="service">Service &amp; Warranty</option>
+                  <option value="parts">Parts &amp; Accessories</option>
+                  <option value="dealer">Dealer Information</option>
+                  <option value="general">General Question</option>
+                </select>
+              </div>
+            </div>
+            <textarea class="form-control" name="message" rows="5" placeholder="Your message..." required></textarea>
+            <button type="submit" class="btn btn-primary-custom mt-3">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="section-title">Find Us</h2>
+          <div class="mt-4 rounded overflow-hidden shadow" style="height: 350px; background: #e9ecef;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49384.69484899106!2d-107.24!3d39.40!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8741571ebb5ec8b1%3A0x943b7a8a0e6889!2sCarbondale%2C%20CO%2081623!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+          <div class="mt-4 p-3 bg-light rounded">
+            <h6><i class="fas fa-info-circle text-primary me-2"></i> Dealer Network</h6>
+            <p class="text-muted small mb-0">Dirt Bikes USA products are sold exclusively through our network of 40+ authorized distributors across the Western and Midwestern United States. <a href="products.html">Contact us</a> to find your nearest dealer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <h3><i class="fas fa-envelope me-2"></i> Stay in the Race</h3>
+          <p class="mb-0 opacity-75">Subscribe for the latest news, product launches, and exclusive offers.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary-custom" style="border-radius: 0 4px 4px 0;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5>DIRT BIKES <span style="color: var(--primary);">USA</span></h5>
+          <p>Premium off-road motorcycles crafted in Carbondale, Colorado. Born from a passion for racing, built for riders who demand the best.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Our Models</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Enduro 250</a></li>
+            <li><a href="products.html">Enduro 550</a></li>
+            <li><a href="products.html">Moto 300</a></li>
+            <li><a href="products.html">Moto 450</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt me-2" style="color: var(--primary);"></i> Carbondale, CO 81623</li>
+            <li><i class="fas fa-phone me-2" style="color: var(--primary);"></i> (970) 555-0199</li>
+            <li><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> info@dirtbikesusa.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2024 Dirt Bikes USA. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
